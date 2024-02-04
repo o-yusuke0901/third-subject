@@ -1,17 +1,33 @@
 package org.example;
 
-//TIP コードを<b>実行</b>するには、<shortcut actionId="Run"/> を押すか、
-// ガターで <icon src="AllIcons.Actions.Execute"/> アイコンをクリックします。
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP ハイライトされたテキストにキャレットがある状態で <shortcut actionId="ShowIntentionActions"/> を押して
-        // IntelliJ IDEA がどのように修正を提案するか確認します。
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP <shortcut actionId="Debug"/> を押してコードのデバッグを開始します。<icon src="AllIcons.Debugger.Db_set_breakpoint"/> ブレークポイントを 1 つ設定しました
-            // <shortcut actionId="ToggleLineBreakpoint"/> を押すといつでも他のブレークポイントを追加できます。
-            System.out.println("i = " + i);
+        Map<String,String> pokemonMap=new HashMap<>();
+        pokemonMap.put("Bulbasaur","No1,Grass type");
+        pokemonMap.put("Charmander","No4,Fire type");
+        pokemonMap.put("squirrel","No7 Water type");
+
+        System.out.println(pokemonMap.get("Bulbasaur"));
+        System.out.println(pokemonMap.get("Charmander"));
+        System.out.println(pokemonMap.get("squirrel"));
+        System.out.println(pokemonMap.get("Pikachu"));
+
+        //exception handling
+        boolean havingBulbasaur = pokemonMap.containsKey("Bulbasaur");
+        System.out.println("Does bulbasaur exist?");
+        if (havingBulbasaur) {
+            System.out.println("Bulbasaur exists.");
         }
+        else {
+            System.out.println("Bulbasaur does not exist.");
+            }
+
+
+
+
     }
 }
