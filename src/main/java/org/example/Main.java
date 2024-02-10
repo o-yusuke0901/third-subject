@@ -14,7 +14,7 @@ public class Main {
         System.out.println(pokemonMap.get("Bulbasaur"));
         System.out.println(pokemonMap.get("Charmander"));
         System.out.println(pokemonMap.get("squirrel"));
-        System.out.println(pokemonMap.get("Pikachu"));
+        System.out.println(pokemonMap.get("Raichu"));
 
         //exception handling
         boolean havingBulbasaur = pokemonMap.containsKey("Bulbasaur");
